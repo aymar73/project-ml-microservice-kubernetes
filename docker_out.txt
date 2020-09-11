@@ -1,0 +1,7 @@
+[2020-09-11 19:48:16,426] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-09-11 19:48:16,434] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+172.17.0.1 - - [11/Sep/2020 19:48:16] "POST /predict HTTP/1.1" 200 -
