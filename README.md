@@ -34,3 +34,5 @@ To run the application, you have a choice between the options listed below.
 * Create Flask app in Container.
 
 * To run via kubectl and deploy this application, you need to define a dockerpath, to run the docker container with kubectl by specifying a container and a port, and to forward the container port to a host port, using the same ports as those in the Dockerfile and `./make_predictions.sh`.
+
+ The directory .circleci has config.yml, a configuration file that includes the necessary instructions to setup a CICD pipeline to fully automate the process.
