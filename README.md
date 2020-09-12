@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/aymar73/project-ml-microservice-kubernetes.svg?style=svg](https://circleci.com/gh/aymar73/project-ml-microservice-kubernetes)
+[![aymar73](https://circleci.com/gh/aymar73/project-ml-microservice-kubernetes.svg?style=svg)](https://github.com/aymar73/project-ml-microservice-kubernetes/tree/master)
 
 ## Project Overview
 
