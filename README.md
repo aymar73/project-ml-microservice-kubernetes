@@ -9,14 +9,14 @@ This project could be extended to any pre-trained machine learning model, such a
   
 ## Cloning the repository
   
-* To get the starting project files, it is recommended that you clone the Github repository, then work locally and push your complete project to a new, Github repository of your own. Alternatively, you could download the code as a zip file.
+  * To get the starting project files, it is recommended that you clone the Github repository, then work locally and push your complete project to a new, Github repository of your own. Alternatively, you could download the code as a zip file.
 To clone this repository from a command line or terminal, you should navigate to a directory where you want to save this repository and then copy-paste this command:
 
-git clone git@github.com:aymar73/project-ml-microservice-kubernetes.git
+    git clone git@github.com:aymar73/project-ml-microservice-kubernetes.git
 
 Then navigate to the downloaded project directory using the following command:
 
-cd project-ml-microservice-kubernetes.git
+    cd project-ml-microservice-kubernetes.git
 
 This should get you into the main working project directory that has all the files. You can test that you are in the correct directory by seeing if you can access one of the project files from the command line. You can type cat Makefile to see the starting Makefile in the project directory, for example.
 
@@ -41,9 +41,9 @@ There are a couple of other libraries that you'll be using, which can be downloa
 
 While you still have your environment activated, you will still need to install:
 
-* Docker
-* Hadolint
-* Kubernetes (Minikube)
+  * Docker
+  * Hadolint
+  * Kubernetes (Minikube)
 
 ## Docker
 
@@ -51,18 +51,34 @@ You will need to use Docker to build and upload a containerized application.
 
   1. you will need to create [a free docker account](https://hub.docker.com/), where you’ll choose a unique username and link your email to a docker account. Your username is your unique docker ID.
   2. To install the latest version of docker, choose the Community Edition (CE) for your operating system, [on docker’s installation site](https://docs.docker.com/get-docker/). It is also recommended that you install the latest, stable release.
-  3. After installation, you can verify that you’ve successfully installed docker by printing its version in your terminal:
+  3. After installation, you can verify that you’ve successfully installed docker by printing its version in your terminal
   
-                                                   ![](C:\Users\aymar\Desktop\Aymar\Jenkins-project\Jenkins-Project\docker--version.png)
+## Run Lint Checks
+
+This project also must pass two lint checks; hadolint checks the Dockerfile for errors and pylint checks the app.py source code for errors.
+
+  1. Install hadolint following the instructions,[on hadolint's page](https://github.com/hadolint/hadolint)
+  2. In your terminal, type: make lint to run lint checks on the project code. You should see a printed statement that rates your code
+  
+## Install Minikube
+
+To run a Kubernetes cluster locally, for testing and project purposes, you need the Kubernetes package, Minikube. This operates in a virtual machine and so you'll need to download two things: A virtual machine (aka a hypervisor) then minikube. Thorough installation instructions can be found [here](https://kubernetes.io/docs/tasks/tools/install-minikube/).
+
+## Troubleshooting
+
+  * In general, you can verify installation by checking the version of a library, ex. kubectl version or docker --version. If there is no package found, you may need to install that library.
+  
+  * To define the disk size you can use the --disk-size parameter. Please see the example below
+       minikube start --driver=hyperv --disk-size=10g --memory=4096 --alsologtostderr
   
 ### Usage Steps
 
-* To run the file in a Docker container, you need to setup and configure Docker locally. The Dockerfile includes the instructions of how to containerize app.py.
+  * The Dockerfile includes the instructions of how to containerize app.py.
 
-* To run the app in a local Kubernetes cluster you need to setup and configure Kubernetes locally through a VM and minikube. To make a prediction, you have to open a separate tab or terminal window. In this new window, navigate to the main project directory and call `./make_predictions.sh` while the app is up. In the prediction window, you should see the value of the prediction, and in your main window, where it indicates that your application is running, you should see some log statements print out. docker_out.txt and kubernetes_out.txt give a preview of the expected output of running the app in Docker and Kubernetes, respectively. Running `./upload_docker.sh` allows us to upload and share the created image in the Docker hub.
+  * To make a prediction, you have to open a separate tab or terminal window. In this new window, navigate to the main project directory and call `./make_predictions.sh` while the app is up. In the prediction window, you should see the value of the prediction, and in your main window, where it indicates that your application is running, you should see some log statements print out. docker_out.txt and kubernetes_out.txt give a preview of the expected output of running the app in Docker and Kubernetes, respectively. Running `./upload_docker.sh` allows us to upload and share the created image in the Docker hub.
 
-* Create Flask app in Container.
+  * Create Flask app in Container.
 
-* To run via kubectl and deploy this application, you need to define a dockerpath, to run the docker container with kubectl by specifying a container and a port, and to forward the container port to a host port, using the same ports as those in the Dockerfile and `./make_predictions.sh`.
+  * To run via kubectl and deploy this application, you need to define a dockerpath, to run the docker container with kubectl by specifying a container and a port, and to forward the container port to a host port, using the same ports as those in the Dockerfile and `./make_predictions.sh`.
 
  The directory .circleci has config.yml, a configuration file that includes the necessary instructions to setup a CICD pipeline to fully automate the process.
