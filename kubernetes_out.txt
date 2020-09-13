@@ -1,5 +1,12 @@
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
 NAME                   READY   STATUS    RESTARTS   AGE
-micromachinelearning   1/1     Running   0          5m25s
+micromachinelearning   1/1     Running   1          45h
 Forwarding from 127.0.0.1:8000 -> 80
 Forwarding from [::1]:8000 -> 80
 Handling connection for 8000
