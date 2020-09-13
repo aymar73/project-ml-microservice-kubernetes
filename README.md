@@ -26,8 +26,8 @@ These instructions assume you have git installed for working with Github from a 
 
 The commands used in this project have been tested in a ubuntu 18-04 based machine. After cloning the repo, you need to setup an isolated environment by:
 
-  1. python3 -m venv ~/.devops (or name it whatever you want)
-  2. source ~/.devops/bin/activateWhile you still have your environment activated, you will still need to install:
+         1. python3 -m venv ~/.devops (or name it whatever you want)
+         2. source ~/.devops/bin/activate
 
 ### Installing dipendencies
 
@@ -48,7 +48,9 @@ While you still have your environment activated, you will still need to install:
 You will need to use Docker to build and upload a containerized application. 
 
   1. you will need to create [a free docker account](https://hub.docker.com/), where you’ll choose a unique username and link your email to a docker account. Your username is your unique docker ID.
+  
   2. To install the latest version of docker, choose the Community Edition (CE) for your operating system, [on docker’s installation site](https://docs.docker.com/get-docker/). It is also recommended that you install the latest, stable release.
+  
   3. After installation, you can verify that you’ve successfully installed docker by printing its version in your terminal
   
 ## Run Lint Checks
@@ -56,6 +58,7 @@ You will need to use Docker to build and upload a containerized application.
 This project also must pass two lint checks; hadolint checks the Dockerfile for errors and pylint checks the app.py source code for errors.
 
   1. Install hadolint following the instructions,[on hadolint's page](https://github.com/hadolint/hadolint)
+  
   2. In your terminal, type: make lint to run lint checks on the project code. You should see a printed statement that rates your code
   
 ## Install Minikube
