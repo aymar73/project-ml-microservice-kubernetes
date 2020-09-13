@@ -12,15 +12,13 @@ This project could be extended to any pre-trained machine learning model, such a
   * To get the starting project files, it is recommended that you clone the Github repository, then work locally and push your complete project to a new, Github repository of your own. Alternatively, you could download the code as a zip file.
 To clone this repository from a command line or terminal, you should navigate to a directory where you want to save this repository and then copy-paste this command:
 
-    git clone git@github.com:aymar73/project-ml-microservice-kubernetes.git
+         git clone git@github.com:aymar73/project-ml-microservice-kubernetes.git
 
 Then navigate to the downloaded project directory using the following command:
 
-    cd project-ml-microservice-kubernetes.git
+         cd project-ml-microservice-kubernetes.git
 
 This should get you into the main working project directory that has all the files. You can test that you are in the correct directory by seeing if you can access one of the project files from the command line. You can type cat Makefile to see the starting Makefile in the project directory, for example.
-
-The yaml file in the CircleCI directory tests your code.
 
 These instructions assume you have git installed for working with Github from a terminal window, but if you do not, you can download that first from this [Github installation page](https://www.atlassian.com/git/tutorials/install-git).
 
@@ -69,7 +67,8 @@ To run a Kubernetes cluster locally, for testing and project purposes, you need 
   * In general, you can verify installation by checking the version of a library, ex. kubectl version or docker --version. If there is no package found, you may need to install that library.
   
   * To define the disk size you can use the --disk-size parameter. Please see the example below
-       minikube start --driver=hyperv --disk-size=10g --memory=4096 --alsologtostderr
+       
+         minikube start --driver=hyperv --disk-size=10g --memory=4096 --alsologtostderr
   
 ### Usage Steps
 
