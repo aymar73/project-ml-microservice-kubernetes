@@ -29,7 +29,7 @@ The commands used in this project have been tested in a ubuntu 18-04 based machi
          1. python3 -m venv ~/.devops (or name it whatever you want)
          2. source ~/.devops/bin/activate
 
-### Installing dipendencies
+## Installing dipendencies
 
 Run `make install` while on your project directory on the terminal to install the necessary dependencies. The Makefile includes instructions on environment setup and lint tests. The dependencies are listed in the requirements.txt; these can be installed using pip commands in the provided Makefile
 
@@ -73,7 +73,7 @@ To run a Kubernetes cluster locally, for testing and project purposes, you need 
        
          minikube start --driver=hyperv --disk-size=10g --memory=4096 --alsologtostderr
   
-### Usage Steps
+## Usage Steps
 
   * The Dockerfile includes the instructions of how to containerize app.py.
 
